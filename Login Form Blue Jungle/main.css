@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.header_logo {
+  font-size: 2em;
+  color: #fff;
+  user-select: none;
+  /* prevent the double click (cant select) */
+}
+
+.header_navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+/* underline when hover */
+.header_navigation a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  left: 0;
+  bottom: -6px;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+
+.header_navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.header_navigation .header_navigation-btn {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+
+.header_navigation .header_navigation-btn:hover {
+  background: #fff;
+  color: #162938;
+}
+
+/* Body */
+.form_body {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.5s ease, height 0.2s ease;
+  transform: scale(0);
+}
+
+.form_body .icon_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #162938;
+  font-size: 2em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.form_body .form_box {
+  width: 100%;
+  padding: 40px;
+}
+
+.form_body h2 {
+  font-size: 2em;
+  color: #162938;
+  text-align: center;
+}
+
+.form_input {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #162938;
+  margin: 30px 0;
+}
+
+.form_input label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #162938;
+  font-weight: 500;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.form_input input:focus ~ label,
+.form_input input:valid ~ label {
+  top: -5px;
+}
+
+.form_input input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 600;
+  padding: 0px 35px 0px 5px;
+}
+
+.form_input .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: #162938;
+  line-height: 57px;
+}
+
+.form_forgot {
+  font-size: 0.9em;
+  color: #162938;
+  font-weight: 500;
+  margin: -15px 0px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form_forgot label input {
+  accent-color: #162938;
+  margin-right: 3px;
+}
+
+.form_forgot a {
+  color: #162938;
+  text-decoration: none;
+}
+
+.form_forgot a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 40px;
+}
+
+.form_register {
+  font-size: 0.9em;
+  color: #162938;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0px 10px;
+}
+
+.form_register p a {
+  color: #162938;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form_register p a:hover {
+  text-decoration: underline;
+}
+
+/* Class active of JS for edit login/registration */
+.form_body.active {
+  height: 470px;
+}
+
+.form_body .form_box.login {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.form_body.active .form_box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.form_body .form_box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.form_body.active .form_box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.form_body.active_headerbtn {
+  transform: scale(1);
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Form Login</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <h2 class="header_logo">Logo</h2>
+
+      <nav class="header_navigation">
+        <a href="X">Home</a>
+        <a href="X">About</a>
+        <a href="X">Services</a>
+        <a href="X">Contract</a>
+
+        <button class="header_navigation-btn">Login</button>
+      </nav>
+    </header>
+
+    <!-- Body: Login -->
+    <div class="form_body">
+      <span class="icon_close">
+        <i class="bx bx-x"></i>
+      </span>
+
+      <div class="form_box login">
+        <h2>Login</h2>
+
+        <form action="">
+          <!-- Form input -->
+          <div class="form_input">
+            <span class="icon">
+              <i class="bx bxs-envelope"></i>
+            </span>
+            <input type="email password" required />
+            <label for="">Email</label>
+          </div>
+
+          <div class="form_input">
+            <span class="icon">
+              <i class="bx bxs-lock-alt"></i>
+            </span>
+            <input type="password" required />
+            <label for="">Password</label>
+          </div>
+
+          <!-- Form forgot -->
+          <div class="form_forgot">
+            <label for="">
+              <input type="checkbox" />
+              Remember me
+            </label>
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <!-- Form submit -->
+          <button type="submit" class="btn">Login</button>
+
+          <!-- Form register -->
+          <div class="form_register">
+            <p>
+              Don't have an account?
+              <a href="#" class="register_link">Register</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Body: Registration -->
+      <div class="form_box register">
+        <h2>Registration</h2>
+
+        <form action="">
+          <!-- Form input -->
+          <div class="form_input">
+            <span class="icon">
+              <i class="bx bxs-user"></i>
+            </span>
+            <input type="text password" required />
+            <label for="">User Name</label>
+          </div>
+
+          <div class="form_input">
+            <span class="icon">
+              <i class="bx bxs-envelope"></i>
+            </span>
+            <input type="email password" required />
+            <label for="">Email</label>
+          </div>
+
+          <div class="form_input">
+            <span class="icon">
+              <i class="bx bxs-lock-alt"></i>
+            </span>
+            <input type="password" required />
+            <label for="">Password</label>
+          </div>
+
+          <!-- Form forgot -->
+          <div class="form_forgot">
+            <label for="">
+              <input type="checkbox" />
+              Agree to the term & conditions
+            </label>
+          </div>
+
+          <!-- Form register -->
+          <button type="submit" class="btn">Register</button>
+
+          <!-- Form register -->
+          <div class="form_register">
+            <p>
+              Already have an account?
+              <a href="#" class="login_link">Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
